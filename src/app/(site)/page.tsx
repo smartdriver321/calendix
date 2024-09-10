@@ -1,8 +1,12 @@
 import Image from 'next/image'
 
+import Hero from '../components/Hero'
+
 export default function HomePage() {
 	return (
 		<>
+			<Hero />
+
 			<section className='text-center mt-32'>
 				<p className='text-gray-600'>Trusted by those companies:</p>
 				<div className='flex gap-8 *:h-6 mt-6 justify-center'>
