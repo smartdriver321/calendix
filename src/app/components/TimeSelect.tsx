@@ -5,6 +5,7 @@ export default function TimeSelect({
 }: {
 	step: 30 | 60
 	value: string
+	// eslint-disable-next-line no-unused-vars
 	onChange: (val: string) => void
 }) {
 	const times = []

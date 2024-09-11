@@ -62,6 +62,7 @@ export default function TimePicker({
 				setBusySlotsLoaded(true)
 			})
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [selectedDay])
 
 	function withinBusySlots(time: Date) {
