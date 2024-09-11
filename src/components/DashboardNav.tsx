@@ -21,25 +21,29 @@ export default function DashboardNav({ username }: { username?: string }) {
 				Profile
 			</Link>
 
-			<Link
-				className={clsx(
-					'rounded-full px-4 py-2',
-					isEventTypesPage ? 'bg-blue-600 text-white' : 'bg-gray-200'
-				)}
-				href={'/dashboard/event-types'}
-			>
-				Event Types
-			</Link>
+			{username && (
+				<>
+					<Link
+						className={clsx(
+							'rounded-full px-4 py-2',
+							isEventTypesPage ? 'bg-blue-600 text-white' : 'bg-gray-200'
+						)}
+						href={'/dashboard/event-types'}
+					>
+						Event Types
+					</Link>
 
-			<Link
-				className={clsx(
-					'rounded-full px-4 py-2',
-					isBookedEventsPage ? 'bg-blue-600 text-white' : 'bg-gray-200'
-				)}
-				href={'/dashboard/booked-events'}
-			>
-				Booked Events
-			</Link>
+					<Link
+						className={clsx(
+							'rounded-full px-4 py-2',
+							isBookedEventsPage ? 'bg-blue-600 text-white' : 'bg-gray-200'
+						)}
+						href={'/dashboard/booked-events'}
+					>
+						Booked Events
+					</Link>
+				</>
+			)}
 		</div>
 	)
 }
