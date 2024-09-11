@@ -50,6 +50,7 @@ export async function POST(req: NextRequest) {
 	// Create this event in calendar
 	const grantId = profileDoc.grantId
 	const startDate = new Date(bookingTime)
+
 	await nylas.events.create({
 		identifier: grantId,
 		requestBody: {

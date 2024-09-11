@@ -71,15 +71,19 @@ export default function TimePicker({
 		for (let busySlot of busySlots) {
 			const busyFrom = new Date(parseInt(busySlot.startTime) * 1000)
 			const busyTo = new Date(parseInt(busySlot.endTime) * 1000)
+
 			if (isAfter(bookingTo, busyFrom) && isBefore(bookingTo, busyTo)) {
 				return true
 			}
+
 			if (isAfter(bookingFrom, busyFrom) && isBefore(bookingFrom, busyTo)) {
 				return true
 			}
+
 			if (isEqual(bookingFrom, busyFrom)) {
 				return true
 			}
+
 			if (isEqual(bookingTo, busyTo)) {
 				return true
 			}
